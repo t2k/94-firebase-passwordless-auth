@@ -15,7 +15,6 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 // Firebase setup instructions
 
 // 1. delete this line, then...
-import { firebaseConfig } from '../env';
 import { PasswordlessAuthComponent } from './passwordless-auth/passwordless-auth.component'; 
 
 // 2. Add your own firebase config to environment.ts
@@ -30,7 +29,7 @@ import { PasswordlessAuthComponent } from './passwordless-auth/passwordless-auth
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     AngularFireAuthModule
   ],
